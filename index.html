@@ -13,18 +13,24 @@
 <body>
 <div class="container">
     <h1>Markdown Table of Contents Generator</h1>
-    <p>Auto-generate a table of contents for better-organized readmes!</p>
+    <p class="lead">Grabs <code>h1</code> through <code>h3</code> headers and creates an ordered table of contents linking to them. Ideal for readmes and other nerdy documentation!</p>
     <div class="wmd-panel row">
     <div id="wmd-button-bar"></div>
         <div class="span6">
+        <h4>Your Markdown goes here</h4>
             <textarea rows="8" class="wmd-input input-block-level" id="wmd-input">Paste Mardown here</textarea>
         </div>
         <div class="span6">
+            <h4>Your Markdown with TOC comes out here</h4>
             <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
             <textarea rows="8" id="output" class="input-block-level"></textarea>
         </div>
-        
+  
+    
 </div>
+
+        <p>If you're so inclined, you can now convert your new table-of-contented markdown into html using the <a href="http://daringfireball.net/projects/markdown/dingus">Original Markdown dingus</a></p>  
+        
 
 </div>
 <script type="text/javascript">
