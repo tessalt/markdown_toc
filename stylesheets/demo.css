@@ -2,7 +2,7 @@ body {
 	background: #fefefe;
 }
 
-a {color:#BD362F;}
+a, a:hover {color:#BD362F;}
 
 header {
   background: #fefefe;
