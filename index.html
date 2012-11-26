@@ -2,22 +2,31 @@
 <html>
 <head>
     <title>PageDown Demo Page</title>
-    <link rel="stylesheet" type="text/css" href="demo/browser/demo.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/demo.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="Markdown.Converter.js"></script>
-    <script type="text/javascript" src="Markdown.Sanitizer.js"></script>
-    <script type="text/javascript" src="Markdown.Editor.js"></script>
+    <script type="text/javascript" src="javascript/Markdown.Converter.js"></script>
+    <script type="text/javascript" src="javascript/Markdown.Sanitizer.js"></script>
+    <script type="text/javascript" src="javascript/Markdown.Editor.js"></script>
 </head>
 
 <body>
-<div class="wmd-panel">
+<div class="container">
+    <h1>Markdown Table of Contents Generator</h1>
+    <p>Auto-generate a table of contents for better-organized readmes!</p>
+    <div class="wmd-panel row">
     <div id="wmd-button-bar"></div>
-    <textarea class="wmd-input" id="wmd-input">
-    </textarea>
-<div id="wmd-preview" class="wmd-panel wmd-preview"></div>
-<textarea id="output"></textarea>
+        <div class="span6">
+            <textarea rows="8" class="wmd-input input-block-level" id="wmd-input">Paste Mardown here</textarea>
+        </div>
+        <div class="span6">
+            <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+            <textarea rows="8" id="output" class="input-block-level"></textarea>
+        </div>
+        
 </div>
 
+</div>
 <script type="text/javascript">
     (function () {
 
