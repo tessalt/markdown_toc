@@ -11,28 +11,66 @@
 </head>
 
 <body>
-<div class="container">
-    <h1>Markdown Table of Contents Generator</h1>
-    <p class="lead">Grabs <code>h1</code> through <code>h3</code> headers and creates an ordered table of contents linking to them. Ideal for readmes and other nerdy documentation!</p>
-    <div class="wmd-panel row">
-    <div id="wmd-button-bar"></div>
-        <div class="span6">
-        <h4>Your Markdown goes here</h4>
-            <textarea rows="8" class="wmd-input input-block-level" id="wmd-input">Paste Mardown here</textarea>
+<header>
+    <div class="container">
+        <h1>Markdown Table of Contents Generator</h1>
+        <p class="lead">Grabs <code>h1</code> through <code>h3</code> headers and creates an ordered table of contents linking to them. Ideal for readmes and other nerdy documentation! <a href="#more">More Info</a></p>
+    </div>
+</header>
+<div class="main">
+    <div class="container">
+        <div class="wmd-panel row">
+            <div id="wmd-button-bar"></div>
+            <div class="span6">
+                <h4>Your Markdown goes here</h4>
+                <textarea rows="8" class="wmd-input input-block-level" id="wmd-input"></textarea>
+            </div>
+            <div class="span6">
+                <h4>Your Markdown with TOC comes out here</h4>
+                <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+                <textarea rows="8" id="output" class="input-block-level"></textarea>
+            </div>
         </div>
-        <div class="span6">
-            <h4>Your Markdown with TOC comes out here</h4>
-            <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
-            <textarea rows="8" id="output" class="input-block-level"></textarea>
-        </div>
-  
-    
+        <p class="well well-small">If you're so inclined, you can now convert your new table-of-contented markdown into html using the <a href="http://daringfireball.net/projects/markdown/dingus">Original Markdown dingus</a><br />
+        <a href="https://github.com/tessa-lt/markdown_toc">You can view the source on GitHub</a> but only if you want to cry. </p>
+    </div>
+    <div id="main" class="container">
+        <h2>About</h2>
+        <p>The TOC generator grabs any level 1 to 3 headings of the format </p>
+<pre>
+Heading Level One 
+================
+# Also heading Level One
+Heading Level Two
+----------------
+## Also heading Level Two
+### Heading Level Three
+</pre>   
+    <p>...and generates an ID from the heading text, rendering it in regular HTML, which will be parsed normally by any Markdown conversion tool or by hosts like GitHub.</p>
+<pre>
+&lt;h1 id="Heading-Level-One-">Heading Level One &lt;/h1>
+&lt;h1 id="Also-heading-Level-One">Also heading Level One&lt;/h1>
+&lt;h2 id="Heading-Level-Two">Heading Level Two&lt;/h2>
+&lt;h2 id="Also-heading-Level-Two">Also heading Level Two&lt;/h2>
+&lt;h3 id="Heading-Level-Three">Heading Level Three&lt;/h3>
+</pre>
+<p>The table of contents is generated at the top of the code as an ordered list linking to the respective headings: </p>
+<pre>
+1. [Heading Level One ](#Heading-Level-One-)
+2. [Also heading Level One](#Also-heading-Level-One)
+3. [Heading Level Two](#Heading-Level-Two)
+4. [Also heading Level Two](#Also-heading-Level-Two)
+5. [Heading Level Three](#Heading-Level-Three)
+</pre>
+        <h2><small>Possibly</small> Upcoming Features </h1>
+        <ul>
+            <li>Creating nested wiki-style table of contents</li>
+            <li>Add option to create unordered list</li>
+            <li>Allow selection of number of header levels to include</li>
+        </ul>   
+    </div>
 </div>
 
-        <p>If you're so inclined, you can now convert your new table-of-contented markdown into html using the <a href="http://daringfireball.net/projects/markdown/dingus">Original Markdown dingus</a></p>  
-        <p>Please don't read the source code unless you want to cry.</p>
-
-</div>
 <script type="text/javascript">
     (function () {
 

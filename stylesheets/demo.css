@@ -1,6 +1,19 @@
 body { 
-	background-color: White;
+	background: url(http://subtlepatterns.com/patterns/grid_noise.png) repeat;
   font-family: sans-serif;
+}
+
+header {
+  background: #fefefe;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%,#f9f9f9 100%);
+  border-bottom: 1px solid #ccc;
+  box-shadow:  0 1px 3px rgba(0, 0, 0, 0.075);
+}
+
+.main {
+  padding-top: 10px;
 }
 
 .wmd-panel  textarea {
