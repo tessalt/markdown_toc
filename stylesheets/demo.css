@@ -1,19 +1,54 @@
 body { 
-	background: url(http://subtlepatterns.com/patterns/grid_noise.png) repeat;
-  font-family: sans-serif;
+	background: #fefefe;
 }
+
+a {color:#BD362F;}
 
 header {
   background: #fefefe;
   background: #ffffff;
-  background: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
-  background: -webkit-linear-gradient(top, #ffffff 0%,#f9f9f9 100%);
-  border-bottom: 1px solid #ccc;
-  box-shadow:  0 1px 3px rgba(0, 0, 0, 0.075);
+  background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%);
+  border-bottom: 1px solid #000;
+  
 }
 
-.main {
-  padding-top: 10px;
+#main {
+  padding: 10px 0;
+  box-shadow: inset  0 1px 3px #000;
+  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/debut_dark.png) repeat;
+}
+
+#main .container > p {
+  margin: 20px 0;
+  color: #fff;
+
+}
+
+.after {
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+}
+
+#main h4 {
+  color :#fff;
+}
+
+
+#main textarea {
+  margin-bottom: 0;
+  border-color: #000;
+}
+
+#about {
+  border-top: 1px solid #000;
+  box-shadow:   0 -1px 3px #000;
+}
+
+#main .well {
+  background-color: #fefefe;
+  border-collor: #ccc;
 }
 
 .wmd-panel  textarea {
@@ -93,4 +128,21 @@ header {
 	font-family: trebuchet MS, helvetica, sans-serif;
 	font-size: 0.8em;
 	font-weight: bold;
+}
+
+.btn-custom {
+  background-color: hsl(10, 86%, 33%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53010", endColorstr="#9c230b");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d53010), to(#9c230b));
+  background-image: -moz-linear-gradient(top, #d53010, #9c230b);
+  background-image: -ms-linear-gradient(top, #d53010, #9c230b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53010), color-stop(100%, #9c230b));
+  background-image: -webkit-linear-gradient(top, #d53010, #9c230b);
+  background-image: -o-linear-gradient(top, #d53010, #9c230b);
+  background-image: linear-gradient(#d53010, #9c230b);
+  border-color: #9c230b #9c230b hsl(10, 86%, 30%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.19);
+  -webkit-font-smoothing: antialiased;
 }

@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Markdown Table of Contents Generator</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/demo.css" />
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/demo.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/Markdown.Converter.js"></script>
     <script type="text/javascript" src="javascript/Markdown.Sanitizer.js"></script>
@@ -14,10 +14,10 @@
 <header>
     <div class="container">
         <h1>Markdown Table of Contents Generator</h1>
-        <p class="lead">Grabs <code>h1</code> through <code>h3</code> headers and creates an ordered table of contents linking to them. Ideal for readmes and other nerdy documentation! <a href="#more">More Info</a></p>
+        <p class="lead">Grabs <code>h1</code> through <code>h3</code> headers and creates an ordered table of contents linking to them.<br /> Ideal for readmes and other nerdy documentation! <a href="#about">More Info</a></p>
     </div>
 </header>
-<div class="main">
+<div id="main">
     <div class="container">
         <div class="wmd-panel row">
             <div id="wmd-button-bar"></div>
@@ -31,12 +31,18 @@
                 <textarea rows="8" id="output" class="input-block-level"></textarea>
             </div>
         </div>
-        <p class="well well-small">If you're so inclined, you can now convert your new table-of-contented markdown into html using the <a href="http://daringfireball.net/projects/markdown/dingus">Original Markdown dingus</a><br />
-        <a href="https://github.com/tessa-lt/markdown_toc">You can view the source on GitHub</a> but only if you want to cry. </p>
+       <div class="after">
+        <p class="clearfix"><a href="http://daringfireball.net/projects/markdown/dingus" class=" btn btn-danger">Convert Markdown to HTML at Daring Fireball</a></p>
+       <p>
+        You can <a  href="https://github.com/tessa-lt/markdown_toc">view the source on GitHub</a> but only if you want to cry. </p></div>
     </div>
-    <div id="main" class="container">
+</div>
+<div id="about">
+    <div class="container">
         <h2>About</h2>
-        <p>The TOC generator grabs any level 1 to 3 headings of the format </p>
+    <p>The TOC generator grabs any level 1 to 3 headings of the format </p>
+        
+    
 <pre>
 Heading Level One 
 ================
@@ -68,6 +74,8 @@ Heading Level Two
             <li>Add option to create unordered list</li>
             <li>Allow selection of number of header levels to include</li>
         </ul>   
+            </div>
+
     </div>
 </div>
 
