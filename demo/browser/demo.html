@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PageDown Demo Page</title>
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Markdown.Converter.js"></script>
+    <script type="text/javascript" src="../../Markdown.Sanitizer.js"></script>
+    <script type="text/javascript" src="../../Markdown.Editor.js"></script>
+</head>
+
+<body>
+<div class="wmd-panel">
+    <div id="wmd-button-bar"></div>
+    <textarea class="wmd-input" id="wmd-input">
+    </textarea>
+<div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+<textarea id="output"></textarea>
+</div>
+
+<script type="text/javascript">
+    (function () {
+
+        var createToc = function(){
+            var headers = [];
+            $("#wmd-preview h1, #wmd-preview h2, #wmd-preview h3").each(function(){
+                headers.push($(this));
+            });
+
+            for (i = headers.length+-1; i >= 0; i--) {
+              var linkInside = $(headers[i]).text();
+              var linkLink = $(headers[i]).attr("id");
+              var full = i+1 + ". [" + linkInside + "](#" + linkLink + ")\n";
+              $("#output").prepend(full);
+            }
+        }
+
+        var createOutput = function() {
+            var copy = $("#wmd-preview").html();
+            $("#output").html(copy);
+        }
+
+        var converter1 = Markdown.getSanitizingConverter();
+        var editor1 = new Markdown.Editor(converter1);
+        editor1.run();
+        editor1.hooks.chain("onPreviewRefresh", function () {
+           createOutput();
+           createToc();
+        });
+
+    })();
+</script>
+</body>
+</html>
